@@ -1,5 +1,7 @@
+import gql from 'graphql-tag'
+
 {{#each operations }}
-  export const {{camelCase name}} =  `{{#format }}
+  export const {{camelCase name}} =  gql`{{#format }}
       {{> renderOp }}
     {{/format}}`;
 {{/each}}
